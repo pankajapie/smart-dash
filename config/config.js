@@ -91,11 +91,10 @@ let config = {
 			module: "weather",
 			position: "top_right",
 			config: {
-				weatherProvider: "openweathermap",
+				weatherProvider: "openmeteo",
 				type: "current",
 				lat: "22.7196",
-				lon: "75.8577",
-				apiKey: "e73102fd202500471b8ce346de1009ab"
+				lon: "75.8577"
 			}
 		},
 		{
@@ -103,11 +102,21 @@ let config = {
 			position: "top_right",
 			header: "Forecast",
 			config: {
-				weatherProvider: "openweathermap",
+				weatherProvider: "openmeteo",
 				type: "forecast",
 				lat: "22.7196",
-				lon: "75.8577",
-				apiKey: "e73102fd202500471b8ce346de1009ab"
+				lon: "75.8577"
+			}
+		},
+
+		/* ===== PIR MOTION SENSOR ===== */
+		{
+			module: "MMM-PIR-Sensor",
+			config: {
+				sensorPin: 6,            // GPIO pin (BCM)
+				powerSavingDelay: 60,    // seconds of no motion before screen sleeps
+				preventHDMITimeout: 0,
+				supportCEC: false
 			}
 		},
 
